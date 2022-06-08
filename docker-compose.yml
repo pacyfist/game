@@ -1,14 +1,15 @@
 services:
 
-  # frontend:
-  #   build: ./frontend
-
+  frontend:
+    build: ./frontend
+    ports:
+      - 80:80
+      
   # backend:
   #   build: ./backend
 
   database:
     image: postgres
-    restart: always
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
